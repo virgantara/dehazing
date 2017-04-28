@@ -9,10 +9,14 @@ s = numel(contents);
 for i = 1:s
   filename = contents(i).name;
   % Open the file specified in filename, do your processing...
-  fpath = strcat('Data\Kelud\Dark Channel\',filename);
+  fpath = strcat('Data\Kelud\Hazy\',filename);
 
   I = imread(fpath);
    I = imcrop(I,[0, 30, 800 450]);
+   
+   J = tesis(I);
+  iname = strcat('Data\Kelud\Tesis\',filename);  
+  imwrite(J,iname);
   
 %   J = tarel(I);
 %   iname = strcat('Data\Simulasi\Tarel\',filename);  
@@ -25,7 +29,7 @@ for i = 1:s
 %   J = he(I);
 %   iname = strcat('Data\Simulasi\He\',filename);  
 %   imwrite(J,iname);
-%   
+  
 %   J = zhu(I);
 %   iname = strcat('Data\Simulasi\Zhu\',filename);  
 %   imwrite(J,iname);
@@ -34,7 +38,7 @@ for i = 1:s
 %   iname = strcat('Data\Simulasi\Chen\',filename);  
 %   imwrite(J,iname);
 % %   
-  J = grs2rgb(I);
-  iname = strcat('Data\Kelud\Dark Channel\Hot\',filename);  
-  imwrite(J,iname);
+%   J = grs2rgb(I);
+%   iname = strcat('Data\Kelud\Dark Channel\Hot\',filename);  
+%   imwrite(J,iname);
 end

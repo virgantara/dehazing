@@ -1,4 +1,4 @@
-I = imread('Data\Kelud\me1.jpg');
+I = imread('Data\kb3.jpg');
 % I = imcrop(I,[0 30 800 450]);
 I = double(I)/255;
 dark_channel = get_dark_channel(I,15);
