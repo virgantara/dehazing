@@ -14,8 +14,8 @@ for i = 1:s
   I = imread(fpath);
    I = imcrop(I,[0, 30, 800 450]);
    
-   J = tesis(I);
-  iname = strcat('Data\Kelud\Tesis\',filename);  
+   J = gao(I);
+  iname = strcat('Data\Kelud\Gao\',filename);  
   imwrite(J,iname);
   
 %   J = tarel(I);
