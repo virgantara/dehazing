@@ -1,4 +1,4 @@
-function [ output value ] = tesis_recover( I, A, d )
+function output = tesis_recover( I, A, d )
 
     [height, width, nch] = size(I);
     value = zeros(height, width);
@@ -6,7 +6,7 @@ function [ output value ] = tesis_recover( I, A, d )
     
     
     e = 2.718281828459;
-    b = 1.0;
+    b = 1.2;
     for c = 1:1:nch
         for i = 1:1:height
             for j = 1:1:width

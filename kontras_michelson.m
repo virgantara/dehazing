@@ -1,6 +1,6 @@
 
 %michelson contrast
-function hasil = kontras_me 
+function hasil = kontras_michelson 
     contents = dir('Data\Kelud\Hazy\*.jpg'); % or whatever the filename extension is
 
     s = numel(contents);
@@ -14,7 +14,7 @@ function hasil = kontras_me
 %       gt = double(imread(fpath))/255;
 %       
       
-      iname = strcat('Data\Kelud\Hazy\',filename);
+      iname = strcat('Data\Kelud\Tesis\',filename);
         
       im = imread(iname);
       im = imcrop(im,[0 30 800 450]);

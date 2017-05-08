@@ -1,32 +1,51 @@
-I = double(imread('foggy_reog.jpg'))/255;
+function hasil = quad_tree(I)
+    [r c ~] = size(I);
+     hasil = I;
+    w = r / 2;
+    h = c / 2;
+    
+    if w < 100
+        return
+    end
+    %
+    % ----------
+    % |  1 | 2  |
+    % |----|----|
+    % |  3 | 4  |
+    % ----------
+    A=I(1:w,1:h); 
+    B=I(1:w,h+1:c);
+    C=I(w+1:r,1:h);
+    D=I(w+1:r,h+1:c);
 
-[r c ~] = size(I);
+%     P = [A;B;C;D];
+% 
+%     avgA = mean(mean(A));
+%     avgB = mean(mean(B));
+%     avgC = mean(mean(C));
+%     avgD = mean(mean(D));
 
-w = r / 2;
-h = c / 2;
+    avg = [mean(mean(A)) mean(mean(B)) mean(mean(C)) mean(mean(D))];
 
-A=I(1:r/2,1:c/2);
-B=I(1:r/2,c/2+1:c);
-C=I(r/2+1:r,1:c/2);
-D=I(r/2+1:r,c/2+1:c);
+    sd = [std2(A) std2(B) std2(C) std2(D)];
 
-P = [A;B;C;D];
+    score = avg - sd;
 
-avgA = mean(mean(A));
-avgB = mean(mean(B));
-avgC = mean(mean(C));
-avgD = mean(mean(D));
+    idx = find(score == max(score));
 
-
-
-avg = [mean(mean(A)) mean(mean(B)) mean(mean(C)) mean(mean(D))];
-
-sd = [std2(A) std2(B) std2(C) std2(D)];
-
-score = avg - sd;
-
-
-
+   
+    if idx == 1
+       hasil = quad_tree(A);
+    elseif idx == 2
+       hasil = quad_tree(B);
+    elseif idx == 3
+       hasil = quad_tree(C);
+    elseif idx == 4
+       hasil = quad_tree(D);
+    end
+    
+    
+end
 %bright = zeros(w,h);
 
 

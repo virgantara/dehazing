@@ -1,5 +1,5 @@
-I = imread('Data\kb3.jpg');
-% I = imcrop(I,[0 30 800 450]);
+I = imread('Data\Kelud\Hazy\Kawah_20161103_112454.jpg');
+I = imcrop(I,[0 30 800 450]);
 I = double(I)/255;
 dark_channel = get_dark_channel(I,15);
 % dark_channel = guided_filter(rgb2gray(I), dark_channel, 15, 0.001);

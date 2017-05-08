@@ -1,4 +1,4 @@
-function J = zhu(I)
+function [J guidedfilter_d] = zhu(I)
     src = im2double(I);
     darkchannel = get_dark_channel(src,15);
     A = get_atmosphere(src, darkchannel);
@@ -9,6 +9,7 @@ function J = zhu(I)
 
     new_d = d_patch(d, 5);
 
+%     new_d = d;
      r = 15;
     res = 0.001;
 

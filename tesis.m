@@ -1,6 +1,6 @@
-function [J t]= tesis(I)
+function J= tesis(I)
     
-%     I = imcrop(I,[0 30 800 450]);
+    I = imcrop(I,[0 30 800 450]);
     src = im2double(I);
     darkchannel = get_dark_channel(src,15);
     A = get_atmosphere(src, darkchannel);
@@ -16,6 +16,6 @@ function [J t]= tesis(I)
 
     guidedfilter_d = guided_filter(rgb2gray(src), new_d, r, res);
 %     J = tmap_gamma_corr(src,guidedfilter_d);
-    [J t]= tesis_recover(src, A, guidedfilter_d);
+    J = tesis_recover(src, A, guidedfilter_d);
 
 end

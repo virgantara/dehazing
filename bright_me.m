@@ -14,7 +14,7 @@ function hasil = bright_me
 %       gt = double(imread(fpath))/255;
 %       
       
-      iname = strcat('Data\Kelud\He\',filename);
+      iname = strcat('Data\Kelud\Chen\',filename);
         
       im = imread(iname);
       im = imcrop(im,[0 30 800 450]);
