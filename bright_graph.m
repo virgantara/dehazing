@@ -12,14 +12,14 @@
 
 % y = kontras_michelson;
 
-yhz = kontras_michelson('hazy');
-yhe = kontras_michelson('he');
-ygao = kontras_michelson('gao');
-yzhu = kontras_michelson('zhu');
-ychen = kontras_michelson('chen');
-ytesis = kontras_michelson('tesis');
+yhz = bright_me('hazy');
+yhe = bright_me('he');
+ygao = bright_me('gao');
+yzhu = bright_me('zhu');
+ychen = bright_me('chen');
+ytesis = bright_me('tesis');
 y = [
-    yhz ygao ychen ytesis
+    yhz  ygao ychen ytesis
     
 ];
 [total amax] = size(y);
