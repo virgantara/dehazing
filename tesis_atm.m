@@ -1,4 +1,4 @@
-I = imread('Data\Kelud\Hazy\Kawah_20161103_112454.jpg');
+I = imread('Data\Kelud\Hazy\Kawah_20161101_084634.jpg');
 I = imcrop(I,[0 30 800 450]);
 I = double(I)/255;
 dark_channel = get_dark_channel(I,15);

@@ -16,9 +16,9 @@ for i = 1:s
   I = imread(fpath);
    I = imcrop(I,[0, 30, 800 450]);
    
-   J = he(I);
-  iname = strcat('Data\Kelud\He\',filename);  
-  imwrite(J,iname);
+%    J = he(I);
+%   iname = strcat('Data\Kelud\He\',filename);  
+%   imwrite(J,iname);
   
 %   J = tarel(I);
 %   iname = strcat('Data\Simulasi\Tarel\',filename);  
@@ -28,17 +28,17 @@ for i = 1:s
   iname = strcat('Data\Kelud\Tesis\',filename);  
   imwrite(J,iname);
 %   
-  J = gao(I);
-  iname = strcat('Data\Kelud\Gao\',filename);  
-  imwrite(J,iname);
+%   J = gao(I);
+%   iname = strcat('Data\Kelud\Gao\',filename);  
+%   imwrite(J,iname);
   
-  J = zhu(I);
-  iname = strcat('Data\Kelud\Zhu\',filename);  
-  imwrite(J,iname);
+%   J = zhu(I);
+%   iname = strcat('Data\Kelud\Zhu\',filename);  
+%   imwrite(J,iname);
 % %   
-  J = chen(I);
-  iname = strcat('Data\Kelud\Chen\',filename);  
-  imwrite(J,iname);
+%   J = chen(I);
+%   iname = strcat('Data\Kelud\Chen\',filename);  
+%   imwrite(J,iname);
 %   
 %   J = grs2rgb(I);
 %   iname = strcat('Data\Kelud\Dark Channel\Hot\',filename);  
