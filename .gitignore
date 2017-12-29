@@ -1,4 +1,12 @@
-Data/*
+# IDE Files
+#-------------------------
+/nbproject/
+.idea/*
 
-*.zip
-*.mat
+## Sublime Text cache files
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
